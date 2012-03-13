@@ -1,0 +1,167 @@
+@import "../base/styles.css";
+
+.search-view-nothingFound, .container-show-status, .login-language-choose, .itemChoiceButton
+	{
+	font-size: 17px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+.v-caption-applogo img, applogo img {
+	display: block;
+	margin: 32px auto 32px auto;
+	float: center !important;
+	width: 250px;
+}
+
+.v-embedded-flagicon img, flagicon img {
+	border: 1px solid black;
+}
+
+.statusIconButton .v-icon {
+	height: 16px !important;
+	width: 16px !important;
+}
+
+.iconButton {
+	margin: 10px 5px 10px 5px;
+}
+
+.helpIconButton {
+	text-align: right;
+	right: 5px;
+}
+
+.selection-touch-selected {
+	background: #CCCCCC;
+	font-size: 125%;
+}
+
+.selection-touch-unselected {
+	background: #AAAAAA;
+	font-size: 125%;
+}
+
+.searchValue {
+	font-weight: bold;
+}
+
+.navigationbar-subheader {
+	color: #555555;
+	text-align: center;
+}
+
+.searchview-entryheader {
+	font-size: 25px;
+	/*     margin: 5px 0px 0px 0px; */
+	padding-top: 5px;
+	padding-bottom: 2px;
+	padding-right: 0px;
+	padding-left: 0px;
+	/*    background: #AAAAAA; */
+}
+
+.appuserData {
+	float: right;
+	overflow: hidden;
+}
+
+.searchview-entry { /*TODO */
+	
+}
+
+.searchview-entry-tourenplannummer {
+	margin: 5px 0px 0px 0px;
+}
+
+.searchview-entry-subheader {
+	font-size: 20px;
+}
+
+.searchview-entry-terminal {
+	margin: 6px 0px 6px 0px;
+	font-size: 20px;
+}
+
+.searchview-entry-termin {
+	margin: 3px 0px 0px 0px;
+	font-size: 18px;
+}
+
+.searchview-entry-termin-late {
+	margin: 3px 0px 0px 0px;
+	font-size: 18px;
+	color: #FF0000;
+}
+
+.searchview-entry-ladeeinheitid {
+	margin: 0px 0px 0px 0px;
+	font-size: 20px;
+}
+
+.v-view.ready {
+	background-image: none;
+}
+
+.details>.v-csslayout-margin { /* 	background:white; */
+	
+}
+
+.details .v-caption {
+	margin-top: 8px;
+	color: 666;
+	font-style: italic;
+}
+
+.v-tk-view .details .v-button-caption {
+	line-height: 18px !important;
+}
+
+.v-table-cell-wrapper {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	text-overflow: ellipsis;
+}
+
+div.olControlZoomPanel {
+	top: 3px;
+	left: 3px;
+}
+
+div.olControlZoomPanel .olControlZoomInItemInactive,div.olControlZoomPanel .olControlZoomOutItemInactive
+	{
+	background: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	width: 35px;
+	height: 35px;
+}
+
+div.olControlZoomPanel .olControlZoomInItemInactive {
+	border-radius: 5px 5px 0 0;
+}
+
+div.olControlZoomPanel .olControlZoomOutItemInactive {
+	border-radius: 0 0 5px 5px;
+	top: 37px;
+}
+
+div.olControlZoomPanel .olControlZoomOutItemInactive:after,div.olControlZoomPanel .olControlZoomInItemInactive:after
+	{
+	font-weight: bold;
+	content: '+';
+	font-size: 36px;
+	padding: 2px 7px;
+	z-index: 2000;
+	color: #fff;
+	line-height: 1em;
+}
+
+div.olControlZoomPanel .olControlZoomOutItemInactive:after {
+	content: '–';
+	line-height: 0.9em;
+	padding: 0 8px;
+}
+
+div.olControlZoomPanel .olControlZoomToMaxExtentItemInactive {
+	display: none;
+}

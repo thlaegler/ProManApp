@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejbwrapperclient
+	PUBLIC "-//DAKOSY AG//DTD EJBWRAPPERCLIENT 1.0//EN"
+		"http://daknt2.dakosy.de/dtd/EJBWrapperClient.dtd"
+>
+<!--
+ $Id: EJBWrapperClient.xml,v 1.1 2009/03/23 15:15:32 jacobs Exp $
+ 
+ Copyright (c) DAKOSY AG. All rights reserved.  
+ -->
+<ejbwrapperclient>
+	<server name="localhost">
+		<initialcontext>
+			<property>
+				<key>java.naming.provider.url</key>
+				<value>jnp://127.0.0.1:1199</value >
+				<!-- value>jnp://SER-UKAGE-VM-1:1199</value-->
+				
+			</property>
+			<property>
+				<key>java.naming.factory.initial</key>
+				<value>org.jnp.interfaces.NamingContextFactory</value>
+			</property>
+			<property>
+				<key>java.naming.factory.url.pkgs</key>
+				<value>org.jboss.naming:org.jnp.interfaces</value>
+			</property>
+		</initialcontext>
+	</server>
+	<server name="localhost-servlet" default="true">
+		<servlet>http://localhost:8180/Unikat_GE/EJBWrapper</servlet>
+		<!-- servlet>http://SER-UKAGE-VM-1:8180/Unikat_GE/EJBWrapper</servlet -->
+	</server>
+</ejbwrapperclient>
+
+

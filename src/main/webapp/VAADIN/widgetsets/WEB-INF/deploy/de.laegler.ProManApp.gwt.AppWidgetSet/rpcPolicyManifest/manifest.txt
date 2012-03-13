@@ -1,0 +1,2 @@
+# Module de.laegler.ProManApp.gwt.AppWidgetSet
+# RPC service class, partial path of RPC policy file
