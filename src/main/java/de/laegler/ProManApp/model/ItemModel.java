@@ -143,9 +143,10 @@ public abstract class ItemModel extends AbstractProManModel implements
 	 */
 	@Override
 	public ItemBean getBeanByDomainId(int aDomainId) {
-		String query = "SELECT * FROM gagaga";
-		ResultSet result = execute(query);
-		return itemBean;
+		// String query = "SELECT * FROM gagaga";
+		// ResultSet result = execute(query);
+		// return itemBean;
+		return null;
 	}
 
 	@Override
