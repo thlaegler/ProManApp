@@ -9,10 +9,6 @@
 package de.laegler.ProManApp.model;
 
 import java.sql.Connection;
-import java.util.List;
-
-import de.laegler.ProManApp.application.Relationship;
-import de.laegler.ProManApp.bean.ItemBean;
 
 /**
  * ...
@@ -24,14 +20,5 @@ import de.laegler.ProManApp.bean.ItemBean;
 public abstract class AbstractProManModel {
 
 	protected Connection connection;
-
-	abstract public ItemBean getBeanByItemId(int aItemId);
-
-	abstract public ItemBean getBeanByDomainId(int aDomainId);
-
-	abstract public List<Relationship> getRelationshipsByItemId(int aItemId);
-
-	abstract public List<ItemBean> getItemsByRelationship(
-			Relationship aRelationship);
 
 }

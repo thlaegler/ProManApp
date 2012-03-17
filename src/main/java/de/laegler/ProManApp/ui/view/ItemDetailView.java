@@ -8,11 +8,12 @@
 
 package de.laegler.ProManApp.ui.view;
 
-import com.vaadin.ui.Button;
-import com.vaadin.ui.CssLayout;
+import com.vaadin.addon.touchkit.ui.VerticalComponentGroup;
+import com.vaadin.ui.Field;
+import com.vaadin.ui.TextField;
 
-import de.laegler.ProManApp.ui.button.CancelButton;
-import de.laegler.ProManApp.ui.button.SaveButton;
+import de.laegler.ProManApp.bean.PersonBean;
+import de.laegler.ProManApp.model.ItemModel;
 
 /**
  * ...
@@ -25,30 +26,58 @@ public abstract class ItemDetailView extends ItemView {
 
 	private static final long serialVersionUID = -2536820335032612663L;
 
-	private CssLayout form;
-	private Button saveButton;
-	private Button cancelButton;
-
 	public ItemDetailView() {
 		super("Details");
-		buildView();
 	}
 
-	public ItemDetailView(String caption) {
-		super(caption);
-		buildView();
+	public ItemDetailView(String aCaption) {
+		super(aCaption);
 	}
 
-	private void buildView() {
-		form = new CssLayout();
-		content.addComponent(form);
-
-		saveButton = new SaveButton();
-		content.addComponent(saveButton);
-
-		cancelButton = new CancelButton();
-		content.addComponent(cancelButton);
-
-		setContent(content);
+	public ItemDetailView(String aCaption, ItemModel aItemModel) {
+		super(aCaption, aItemModel);
 	}
+
+	@Override
+	protected void buildView() {
+		this.itemModel.getItemBean();
+		VerticalComponentGroup itemGroup = new VerticalComponentGroup();
+		itemGroup.setWidth("100%");
+		itemGroup.setMargin(true);
+
+		Field eMailField = new TextField("Name");
+		eMailField.setValue(((PersonBean) this.getItemModel().getItemBean())
+				.getName());
+		itemGroup.addComponent(eMailField);
+
+		form.addComponent(itemGroup);
+
+		// VerticalComponentGroup itemDetailGroup = getItemDetailGroup();
+		form.addComponent(getItemDetailGroup());
+
+		// TODO: Relationen iterieren.
+		// ArrayList<Relationship> relationships = this.getItemModel()
+		// .getRelationships();
+		// for (Relationship relationship : relationships) {
+		//
+		// }
+		this.form.addComponent(itemGroup);
+		content.addComponent(this.getForm());
+	}
+
+	abstract protected VerticalComponentGroup getItemDetailGroup();
+
+	// @Override
+	// protected void buildView() {
+	// form = new CssLayout();
+	// content.addComponent(form);
+	//
+	// saveButton = new SaveButton();
+	// content.addComponent(saveButton);
+	//
+	// cancelButton = new CancelButton();
+	// content.addComponent(cancelButton);
+	//
+	// setContent(content);
+	// }
 }

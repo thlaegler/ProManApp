@@ -8,6 +8,7 @@
 
 package de.laegler.ProManApp.ui.view;
 
+
 /**
  * ...
  * 
@@ -22,4 +23,11 @@ public class ModelView extends AbstractProManView {
 	public ModelView() {
 		super("Models");
 	}
+
+	@Override
+	protected void buildView() {
+		// TODO Auto-generated method stub
+
+	}
+
 }

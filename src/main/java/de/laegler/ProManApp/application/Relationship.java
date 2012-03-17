@@ -8,7 +8,10 @@
 
 package de.laegler.ProManApp.application;
 
+import java.util.ArrayList;
+
 import de.laegler.ProManApp.bean.ItemBean;
+import de.laegler.ProManApp.model.AbstractProManModel;
 
 /**
  * ...
@@ -17,7 +20,7 @@ import de.laegler.ProManApp.bean.ItemBean;
  * @version 0.1
  * @since 0.1
  **/
-public class Relationship {
+public class Relationship extends AbstractProManModel {
 	/** */
 	private ItemBean fromItem;
 
@@ -25,7 +28,7 @@ public class Relationship {
 	private ItemBean toItem;
 
 	/** */
-	private RelationshipType relationType;
+	private Relationshiptype relationtype;
 
 	/** */
 	public ItemBean getFromItem() {
@@ -50,12 +53,39 @@ public class Relationship {
 	}
 
 	/** */
-	public RelationshipType getRelationType() {
-		return this.relationType;
+	public Relationshiptype getRelationtype() {
+		return this.relationtype;
 	}
 
 	/** */
-	public void setRelationType(RelationshipType aRelationType) {
-		this.relationType = aRelationType;
+	public void setRelationType(Relationshiptype aRelationtype) {
+		this.relationtype = aRelationtype;
+	}
+
+	public ArrayList<Relationship> getRelationshipsByItemBean(ItemBean aItemBean) {
+		String sql = "SELECT super.*, sub.* "
+				+ "FROM item super, relationship rel, "
+				+ aItemBean.getItemType().getName() + " sub "
+				+ "WHERE super.itemId = sub.itemId;";
+
+		// String sql = "SELECT * FROM person";
+
+		System.out.println(sql);
+
+		ArrayList<Relationship> itemBeans = new ArrayList<Relationship>();
+
+		// TODO: Relationshipabfrage
+		// ResultSet resultSet;
+		// try {
+		// resultSet = execute(sql);
+		// while (resultSet.next()) {
+		// ItemBean bean = getNewItemBean();
+		// bean = buildItemBean(resultSet, bean);
+		// itemBeans.add(bean);
+		// }
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+		return itemBeans;
 	}
 }

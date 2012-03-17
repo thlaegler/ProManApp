@@ -24,29 +24,24 @@ abstract public class AbstractProManView extends NavigationView {
 
 	protected CssLayout content;
 
-	public AbstractProManView() {
-		super();
-		this.content = new CssLayout();
-		// TODO Auto-generated constructor stub
-	}
-
-	//
-	// public AbstractProManView(Component content) {
-	// super(content);
-	// this.content = new CssLayout();
-	// // TODO Auto-generated constructor stub
-	// }
-	//
-	// public AbstractProManView(String caption, Component content) {
-	// super(caption, content);
-	// this.content = new CssLayout();
-	// // TODO Auto-generated constructor stub
-	// }
-
 	public AbstractProManView(String aCaption) {
 		super(aCaption);
-		this.content = new CssLayout();
-		// TODO Auto-generated constructor stub
 	}
+
+	@Override
+	public void attach() {
+		super.attach();
+
+		this.content = new CssLayout();
+		this.content.setWidth("100%");
+
+		this.setWidth("100%");
+
+		this.buildView();
+
+		setContent(this.content);
+	}
+
+	abstract protected void buildView();
 
 }

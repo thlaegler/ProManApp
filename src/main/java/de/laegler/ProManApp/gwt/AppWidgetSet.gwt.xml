@@ -10,5 +10,5 @@
 	<inherits name="com.vaadin.addon.touchkit.gwt.TouchKitWidgetSet" />
     
 
-    <inherits name="de.dakosy.unikat.truckwebapp.widgetset.UnikatvaadinprototypeWidgetset" />
+    
 </module>

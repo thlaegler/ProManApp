@@ -8,6 +8,7 @@
 
 package de.laegler.ProManApp.ui.view;
 
+
 /**
  * ...
  * 
@@ -22,4 +23,11 @@ public class SettingView extends AbstractProManView {
 	public SettingView() {
 		super("Settings");
 	}
+
+	@Override
+	protected void buildView() {
+		// TODO Auto-generated method stub
+
+	}
+
 }

@@ -36,7 +36,7 @@ public class PersonModel extends ItemModel {
 	 * 
 	 * @param aItemBean
 	 */
-	public PersonModel(PersonBean aItemBean) {
+	public PersonModel(ItemBean aItemBean) {
 		super(aItemBean);
 	}
 
@@ -55,15 +55,14 @@ public class PersonModel extends ItemModel {
 	}
 
 	@Override
-	protected ItemBean buildItemBean(ResultSet aResultSet, ItemBean aBean) {
-		aBean = super.buildItemBean(aResultSet, aBean);
+	protected ItemBean buildItemBean(ResultSet aResultSet, ItemBean aItemBean) {
+		aItemBean = super.buildItemBean(aResultSet, aItemBean);
 		try {
-			((PersonBean) aBean).setEMail(aResultSet.getString("eMail"));
+			((PersonBean) aItemBean).setEMail(aResultSet.getString("eMail"));
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return aBean;
+		return aItemBean;
 	}
 
 	@Override
@@ -71,13 +70,13 @@ public class PersonModel extends ItemModel {
 		return "person";
 	}
 
+	@Override
 	public List<Relationship> getRelationsByItemId(int aItemId) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@Override
 	public List<ItemBean> getItemsByRelation(Object aRelation) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

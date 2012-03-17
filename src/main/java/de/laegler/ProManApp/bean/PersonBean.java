@@ -16,15 +16,13 @@ package de.laegler.ProManApp.bean;
  * @since 0.1
  **/
 public class PersonBean extends ItemBean {
-	/** */
+
 	protected String eMail;
 
-	/** */
 	public void setEMail(String aEMail) {
 
 	}
 
-	/** */
 	public String getEMail() {
 		return eMail;
 

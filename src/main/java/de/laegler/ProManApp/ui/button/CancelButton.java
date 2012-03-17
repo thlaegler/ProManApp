@@ -8,17 +8,14 @@ public class CancelButton extends Button {
 
 	public CancelButton() {
 		super("Cancel");
-		// TODO Auto-generated constructor stub
 	}
 
 	public CancelButton(String caption, ClickListener listener) {
 		super(caption, listener);
-		// TODO Auto-generated constructor stub
 	}
 
 	public CancelButton(String caption) {
 		super(caption);
-		// TODO Auto-generated constructor stub
 	}
 
 }

@@ -3,6 +3,7 @@ package de.laegler.ProManApp.ui.view;
 import com.vaadin.addon.touchkit.ui.NavigationButton;
 import com.vaadin.addon.touchkit.ui.VerticalComponentGroup;
 
+import de.laegler.ProManApp.bean.ItemBean;
 import de.laegler.ProManApp.model.ItemModel;
 
 public class SoftwareIndexView extends ItemIndexView {
@@ -19,7 +20,8 @@ public class SoftwareIndexView extends ItemIndexView {
 		this.buildView();
 	}
 
-	private void buildView() {
+	@Override
+	protected void buildView() {
 		VerticalComponentGroup layout = new VerticalComponentGroup();
 		layout.setMargin(true);
 
@@ -40,6 +42,17 @@ public class SoftwareIndexView extends ItemIndexView {
 
 	@Override
 	protected ItemModel getNewItemModel() {
+		return null;
+	}
+
+	@Override
+	protected ItemDetailView getNewItemDetailView(ItemModel aItemModel) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected ItemDetailView getNewItemDetailView(ItemBean aItemBean) {
 		// TODO Auto-generated method stub
 		return null;
 	}

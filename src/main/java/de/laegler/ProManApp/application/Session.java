@@ -26,6 +26,7 @@ public class Session {
 	private boolean loginFlag = false;
 
 	private HttpServletResponse httpResponse;
+	@SuppressWarnings("unused")
 	private HttpServletRequest httpRequest;
 
 	public Session() {

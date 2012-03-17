@@ -14,6 +14,8 @@ import com.vaadin.addon.touchkit.ui.NavigationButton;
 import com.vaadin.addon.touchkit.ui.VerticalComponentGroup;
 
 import de.laegler.ProManApp.bean.ItemBean;
+import de.laegler.ProManApp.model.ItemModel;
+import de.laegler.ProManApp.ui.button.ItemDetailNavButton;
 
 /**
  * ItemIndexView
@@ -26,49 +28,41 @@ public abstract class ItemIndexView extends ItemView {
 
 	private static final long serialVersionUID = -8683045446995327006L;
 
-	/**
-	 * Constructor
-	 */
 	public ItemIndexView() {
 		super("Index");
 	}
 
-	/**
-	 * Constructor
-	 * 
-	 * @param aCaption
-	 */
 	public ItemIndexView(String aCaption) {
 		super(aCaption);
 	}
 
 	@Override
-	public void attach() {
-		this.buildView();
-	}
+	protected void buildView() {
+		VerticalComponentGroup itemGroup = new VerticalComponentGroup();
+		itemGroup.setWidth("100%");
+		itemGroup.setMargin(true);
 
-	/**
-	 * 
-	 */
-	private void buildView() {
-		VerticalComponentGroup layout = new VerticalComponentGroup();
-		layout.setMargin(true);
+		ArrayList<ItemBean> itemBeans = this.itemModel.getItemBeans();
+		for (ItemBean itemBean : itemBeans) {
+			NavigationButton itemDetailNavButton = new ItemDetailNavButton();
 
-		ArrayList<ItemBean> itemBeans = itemModel.getItemBeans();
+			itemDetailNavButton.setCaption("" + itemBean.getItemId());
+			itemDetailNavButton.setDescription(itemBean.getName());
+			// TODO: Icons
+			// itemDetailNavButton.setIcon();
 
-		if (itemBeans != null) {
-			for (ItemBean itemBean : itemBeans) {
-				layout.addComponent(new NavigationButton(itemBean.getName(),
-						getNewItemDetailView()));
-			}
+			itemDetailNavButton.setTargetView(getNewItemDetailView(itemBean));
+
+			itemGroup.addComponent(itemDetailNavButton);
 		}
-		content.addComponent(layout);
+		this.form.addComponent(itemGroup);
+		content.addComponent(this.getForm());
 	}
 
-	/**
-	 * 
-	 * @return
-	 */
+	@Override
 	abstract protected ItemDetailView getNewItemDetailView();
 
+	abstract protected ItemDetailView getNewItemDetailView(ItemModel aItemModel);
+
+	abstract protected ItemDetailView getNewItemDetailView(ItemBean aItemBean);
 }

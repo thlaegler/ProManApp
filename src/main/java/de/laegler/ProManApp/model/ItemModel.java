@@ -14,7 +14,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 
 import de.laegler.ProManApp.application.Relationship;
 import de.laegler.ProManApp.bean.ItemBean;
@@ -31,14 +30,9 @@ public abstract class ItemModel extends AbstractProManModel implements
 
 	protected final ItemBean itemBean;
 
-	protected ArrayList<ItemBean> itemBeans;
-
 	protected final String itemTable;
 
-	private Connection connection;
-
 	public ItemModel() {
-		// super();
 		this.itemBean = getNewItemBean();
 		this.itemTable = getItemTable();
 	}
@@ -50,6 +44,9 @@ public abstract class ItemModel extends AbstractProManModel implements
 	}
 
 	public ItemBean getItemBean() {
+		// if (this.itemBean == null) {
+		// this.itemBean = getNewItemBean();
+		// }
 		return itemBean;
 	}
 
@@ -94,22 +91,22 @@ public abstract class ItemModel extends AbstractProManModel implements
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
-			if (resultSet != null) {
-				try {
-					resultSet.close();
-				} catch (SQLException e) {
-					resultSet = null;
-					e.printStackTrace();
-				}
-			}
-			if (statement != null) {
-				try {
-					statement.close();
-				} catch (SQLException e) {
-					statement = null;
-					e.printStackTrace();
-				}
-			}
+			// if (resultSet != null) {
+			// try {
+			// resultSet.close();
+			// } catch (SQLException e) {
+			// resultSet = null;
+			// e.printStackTrace();
+			// }
+			// }
+			// if (statement != null) {
+			// try {
+			// statement.close();
+			// } catch (SQLException e) {
+			// statement = null;
+			// e.printStackTrace();
+			// }
+			// }
 		}
 		return resultSet;
 	}
@@ -149,15 +146,19 @@ public abstract class ItemModel extends AbstractProManModel implements
 		return null;
 	}
 
-	@Override
-	public List<Relationship> getRelationshipsByItemId(int aItemId) {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<Relationship> getRelationships() {
+		return this.getRelationshipsByItemBean(this.getItemBean());
 	}
 
-	@Override
-	public List<ItemBean> getItemsByRelationship(Relationship aRelationship) {
-		// TODO Auto-generated method stub
+	public ArrayList<Relationship> getRelationshipsByItemBean(ItemBean aItemBean) {
+		Relationship relationship = new Relationship();
+		ArrayList<Relationship> relationships = relationship
+				.getRelationshipsByItemBean(aItemBean);
+
+		return relationships;
+	}
+
+	public ArrayList<ItemBean> getItemsByRelationship(Relationship aRelationship) {
 		return null;
 	}
 
@@ -166,27 +167,44 @@ public abstract class ItemModel extends AbstractProManModel implements
 	 * @return
 	 */
 	public ArrayList<ItemBean> getItemBeans() {
-		if (this.itemBeans == null) {
-			this.itemBeans = new ArrayList<ItemBean>();
+		String sql = "SELECT super.*, sub.* " + "FROM item super, "
+				+ this.getItemTable() + " sub "
+				+ "WHERE super.itemId = sub.itemId;";
 
-			// String sql = "SELECT * FROM " + this.getItemTable() + ";";
-			String sql = "SELECT * FROM person";
+		System.out.println(sql);
 
-			ResultSet resultSet;
-			try {
-				resultSet = execute(sql);
-				if (resultSet != null && !resultSet.isClosed()) {
-					while (resultSet.next()) {
-						ItemBean bean = getItemBean();
-						bean = buildItemBean(resultSet, bean);
-						this.itemBeans.add(bean);
-					}
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
+		ArrayList<ItemBean> itemBeans = new ArrayList<ItemBean>();
+
+		ResultSet resultSet;
+		try {
+			resultSet = execute(sql);
+			while (resultSet.next()) {
+				ItemBean bean = getNewItemBean();
+				bean = buildItemBean(resultSet, bean);
+				itemBeans.add(bean);
 			}
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
-		return this.itemBeans;
+		return itemBeans;
+	}
+
+	/**
+	 * 
+	 * @param aResultSet
+	 * @param aItem
+	 * @return
+	 */
+	protected ItemBean buildItemBean(ResultSet aResultSet, ItemBean aItemBean) {
+		try {
+			aItemBean.setItemId(aResultSet.getInt("itemId"));
+			aItemBean.setName(aResultSet.getString("name"));
+			aItemBean.setDescription(aResultSet.getString("description"));
+			aItemBean.setActive(aResultSet.getBoolean("isActive"));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return aItemBean;
 	}
 
 	/**
@@ -195,22 +213,16 @@ public abstract class ItemModel extends AbstractProManModel implements
 	 */
 	abstract protected ItemBean getNewItemBean();
 
+	//
 	abstract protected String getItemTable();
+	//
+	// abstract public ItemBean getBeanByItemId(int aItemId);
+	//
+	// abstract public ItemBean getBeanByDomainId(int aDomainId);
+	//
+	// abstract public List<Relationship> getRelationshipsByItemId(int aItemId);
+	//
+	// abstract public List<ItemBean> getItemsByRelationship(
+	// Relationship aRelationship);
 
-	/**
-	 * 
-	 * @param aResultSet
-	 * @param aItem
-	 * @return
-	 */
-	protected ItemBean buildItemBean(ResultSet aResultSet, ItemBean aItem) {
-		try {
-			aItem.setItemId(aResultSet.getInt("itemId"));
-			// aItem.setRelationships(aResultSet.getInt("businessId"));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return aItem;
-	}
 }

@@ -23,17 +23,14 @@ public class SearchButton extends Button {
 
 	public SearchButton() {
 		super("Search");
-		// TODO Auto-generated constructor stub
 	}
 
 	public SearchButton(String caption, ClickListener listener) {
 		super(caption, listener);
-		// TODO Auto-generated constructor stub
 	}
 
 	public SearchButton(String caption) {
 		super(caption);
-		// TODO Auto-generated constructor stub
 	}
 
 }

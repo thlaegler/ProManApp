@@ -27,26 +27,10 @@ public class PerspectiveView extends AbstractProManView {
 
 	public PerspectiveView() {
 		super("Perspectives");
-		this.buildView();
-		// TODO Auto-generated constructor stub
 	}
 
-	// public PerspectiveView(Component content) {
-	// super(content);
-	// // TODO Auto-generated constructor stub
-	// }
-	//
-	// public PerspectiveView(String caption, Component content) {
-	// super(caption, content);
-	// // TODO Auto-generated constructor stub
-	// }
-	//
-	// public PerspectiveView(String caption) {
-	// super(caption);
-	// // TODO Auto-generated constructor stub
-	// }
-
-	private void buildView() {
+	@Override
+	protected void buildView() {
 		form = new CssLayout();
 
 		VerticalComponentGroup layout = new VerticalComponentGroup();

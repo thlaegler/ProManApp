@@ -8,17 +8,14 @@ public class SaveButton extends Button {
 
 	public SaveButton() {
 		super("Save");
-		// TODO Auto-generated constructor stub
 	}
 
 	public SaveButton(String caption) {
 		super(caption);
-		// TODO Auto-generated constructor stub
 	}
 
 	public SaveButton(String caption, ClickListener listener) {
 		super(caption, listener);
-		// TODO Auto-generated constructor stub
 	}
 
 }

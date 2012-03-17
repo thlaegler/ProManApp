@@ -8,6 +8,7 @@
 
 package de.laegler.ProManApp.ui.view;
 
+
 /**
  * ...
  * 
@@ -26,6 +27,7 @@ public class LoginView extends AbstractProManView {
 		this.buildView();
 	}
 
+	@Override
 	public void buildView() {
 		// Titel
 		setCaption("Login");
@@ -59,63 +61,5 @@ public class LoginView extends AbstractProManView {
 		//
 		// setContent(content);
 	}
-	//
-	// public void authenticate() {
-	// String msg = localized(TruckAppDict.LOGIN.getLabel());
-	//
-	// if (!loginForm.validateForm()) {
-	// LOG.debug(msg);
-	// getWindow().showNotification(msg);
-	// return;
-	// }
-	// SessionModel sessionModel = UnikatTruckWebApplication.getApp()
-	// .getSessionModel();
-	// // try {
-	// sessionModel.login();
-	// if (sessionModel.hasValidLogin()) {
-	// LOG.debug("Anmeldung erfolgreich für den Benutzer \""
-	// + UnikatTruckWebApplication.getApp().getSessionModel()
-	// .getLogin().getUsername() + "\"");
-	// } else {
-	// LOG.debug(msg);
-	// getWindow().showNotification(msg);
-	// }
-	//
-	// UnikatTruckWebApplication.getApp().onBrowserDetailsReady();
-	// // } catch (NullPointerException anEx) {
-	// // // TODO hier sollte eine Individuelle Exception geworfen werden.
-	// // LOG.debug(msg);
-	// // getWindow().showNotification(msg);
-	// // }
-	// }
-	//
-	// private CssLayout createButtonBar() {
-	// CssLayout buttonBar = new CssLayout();
-	// buttonBar.setMargin(true);
-	// buttonBar.setWidth("100%");
-	// Button loginButton = new Button(
-	// localized(TruckAppDict.LOGIN.getLabel()), this, "authenticate");
-	// loginButton.setSizeFull();
-	// loginButton.setWidth("100%");
-	// buttonBar.addComponent(loginButton);
-	// return buttonBar;
-	// }
-	//
-	// /*
-	// * private Button createButtonBar() { Button loginButton = new
-	// * Button(localized(TruckAppDict.BUTTONLOGIN.getLabel()), this,
-	// * "authenticate"); loginButton.setSpacing(true);
-	// * loginButton.setMargin(true); loginButton.setSizeFull(); return
-	// * loginButton; }
-	// */
-	//
-	// private VerticalComponentGroup createLanguageGroup() {
-	// VerticalComponentGroup languageGroup = new VerticalComponentGroup();
-	// NavigationButton languageButton = new ChooseLanguageButton(
-	// UnikatTruckWebApplication.getApp().getSessionModel()
-	// .getLocale());
-	// languageGroup.addComponent(languageButton);
-	// return languageGroup;
-	// }
 
 }
