@@ -12,13 +12,13 @@ import com.vaadin.addon.touchkit.ui.NavigationView;
 import com.vaadin.ui.CssLayout;
 
 /**
- * ...
+ * AbstractProManView
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
-abstract public class AbstractProManView extends NavigationView {
+ */
+public abstract class AbstractProManView extends NavigationView {
 
 	private static final long serialVersionUID = 6308730452905599481L;
 

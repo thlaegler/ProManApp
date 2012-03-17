@@ -1,9 +1,9 @@
 /**
+ * 
  * (c) Copyright 2012 Laegler IT Solutions Germany GbR
  *
  * Project: ProMan 0.1
  *
- * This File <code>ItemBean.java</code> was generated from UML-Model with StarUML 11.03.2012 by Thomas Laegler <thomas.laegler@googlemail.com>
  */
 
 package de.laegler.ProManApp.bean;
@@ -15,41 +15,32 @@ import de.laegler.ProManApp.application.ItemType;
 import de.laegler.ProManApp.application.Relationship;
 
 /**
- * ...
+ * ItemBean
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public class ItemBean extends AbstractProManBean {
-	/** */
+
 	protected int itemId;
 
-	/** */
 	protected int domainId;
 
-	/** */
 	protected ItemType itemType;
 
-	/** */
 	protected List<Relationship> relationships;
 
-	/** */
 	protected String name;
 
-	/** */
 	protected String description;
 
-	/** */
 	protected Date createDate;
 
-	/** */
 	protected PersonBean createUser;
 
-	/** */
 	protected boolean isActive;
 
-	/** */
 	protected boolean isRemoved;
 
 	public int getItemId() {
@@ -131,4 +122,5 @@ public class ItemBean extends AbstractProManBean {
 	public void setRemoved(boolean isRemoved) {
 		this.isRemoved = isRemoved;
 	}
+
 }

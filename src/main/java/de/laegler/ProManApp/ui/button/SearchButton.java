@@ -16,7 +16,7 @@ import com.vaadin.ui.Button;
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public class SearchButton extends Button {
 
 	private static final long serialVersionUID = -1918756062768106149L;

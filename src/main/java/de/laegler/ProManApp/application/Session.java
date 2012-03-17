@@ -1,9 +1,9 @@
 /**
+ * 
  * (c) Copyright 2012 Laegler IT Solutions Germany GbR
  *
  * Project: ProMan 0.1
  *
- * This File <code>Session.java</code> was generated from UML-Model with StarUML 11.03.2012 by Thomas Laegler <thomas.laegler@googlemail.com>
  */
 
 package de.laegler.ProManApp.application;
@@ -14,18 +14,20 @@ import javax.servlet.http.HttpServletResponse;
 import de.laegler.ProManApp.bean.PersonBean;
 
 /**
- * ...
+ * Session
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public class Session {
-	/** */
+
 	private PersonBean user;
+
 	private boolean loginFlag = false;
 
 	private HttpServletResponse httpResponse;
+
 	@SuppressWarnings("unused")
 	private HttpServletRequest httpRequest;
 

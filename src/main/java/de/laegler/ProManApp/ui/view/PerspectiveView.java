@@ -13,12 +13,12 @@ import com.vaadin.addon.touchkit.ui.VerticalComponentGroup;
 import com.vaadin.ui.CssLayout;
 
 /**
- * ...
+ * PerspectiveView
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public class PerspectiveView extends AbstractProManView {
 
 	private static final long serialVersionUID = -7458927080341634900L;

@@ -1,9 +1,9 @@
 /**
+ * 
  * (c) Copyright 2012 Laegler IT Solutions Germany GbR
  *
  * Project: ProMan 0.1
  *
- * This File <code>ItemDetailView.java</code> was generated from UML-Model with StarUML 11.03.2012 by Thomas Laegler <thomas.laegler@googlemail.com>
  */
 
 package de.laegler.ProManApp.ui.view;
@@ -17,12 +17,12 @@ import de.laegler.ProManApp.bean.PersonBean;
 import de.laegler.ProManApp.model.ItemModel;
 
 /**
- * ...
+ * ItemDetailView
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public abstract class ItemDetailView extends ItemView {
 
 	private static final long serialVersionUID = -2536820335032612663L;
@@ -86,4 +86,5 @@ public abstract class ItemDetailView extends ItemView {
 	//
 	// setContent(content);
 	// }
+
 }
