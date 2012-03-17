@@ -30,7 +30,6 @@ public class ProManApplication extends TouchKitApplication implements
 
 	private static final long serialVersionUID = -3625980122738831470L;
 
-	/** */
 	private Session session;
 	private TouchKitWindow mainWindow;
 	private MainTabBarView mainTabBarView;
@@ -93,10 +92,6 @@ public class ProManApplication extends TouchKitApplication implements
 		// }
 	}
 
-	/**
-	 * 
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		new ProManApplication().init();
 	}
