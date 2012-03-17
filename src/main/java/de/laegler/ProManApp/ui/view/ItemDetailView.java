@@ -9,6 +9,7 @@
 package de.laegler.ProManApp.ui.view;
 
 import com.vaadin.addon.touchkit.ui.VerticalComponentGroup;
+import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.Field;
 import com.vaadin.ui.TextField;
 
@@ -40,7 +41,12 @@ public abstract class ItemDetailView extends ItemView {
 
 	@Override
 	protected void buildView() {
-		this.itemModel.getItemBean();
+		content.addComponent(getItemDetailForm());
+	}
+
+	protected CssLayout getItemDetailForm() {
+		CssLayout itemDetailForm = new CssLayout();
+
 		VerticalComponentGroup itemGroup = new VerticalComponentGroup();
 		itemGroup.setWidth("100%");
 		itemGroup.setMargin(true);
@@ -50,10 +56,10 @@ public abstract class ItemDetailView extends ItemView {
 				.getName());
 		itemGroup.addComponent(eMailField);
 
-		form.addComponent(itemGroup);
+		itemDetailForm.addComponent(itemGroup);
 
 		// VerticalComponentGroup itemDetailGroup = getItemDetailGroup();
-		form.addComponent(getItemDetailGroup());
+		itemDetailForm.addComponent(getItemDetailGroup());
 
 		// TODO: Relationen iterieren.
 		// ArrayList<Relationship> relationships = this.getItemModel()
@@ -61,8 +67,8 @@ public abstract class ItemDetailView extends ItemView {
 		// for (Relationship relationship : relationships) {
 		//
 		// }
-		this.form.addComponent(itemGroup);
-		content.addComponent(this.getForm());
+
+		return itemDetailForm;
 	}
 
 	abstract protected VerticalComponentGroup getItemDetailGroup();

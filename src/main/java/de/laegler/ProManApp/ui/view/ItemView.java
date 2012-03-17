@@ -8,8 +8,6 @@
 
 package de.laegler.ProManApp.ui.view;
 
-import com.vaadin.ui.CssLayout;
-
 import de.laegler.ProManApp.model.ItemModel;
 
 /**
@@ -26,29 +24,35 @@ public abstract class ItemView extends AbstractProManView implements
 
 	protected final ItemModel itemModel;
 
-	protected CssLayout form;
+	// protected CssLayout form;
 
 	public ItemView(String aCaption) {
 		super(aCaption);
 		this.itemModel = getNewItemModel();
-		this.form = new CssLayout();
-		this.form.setWidth("100%");
+
+		this.buildView();
+		setContent(this.content);
+		// this.form = new CssLayout();
+		// this.form.setWidth("100%");
 	}
 
 	public ItemView(String aCaption, ItemModel aItemModel) {
 		super(aCaption);
 		this.itemModel = aItemModel;
-		this.form = new CssLayout();
-		this.form.setWidth("100%");
+
+		this.buildView();
+
+		// this.form = new CssLayout();
+		// this.form.setWidth("100%");
 	}
 
 	public ItemModel getItemModel() {
 		return this.itemModel;
 	}
 
-	public CssLayout getForm() {
-		return this.form;
-	}
+	// public CssLayout getForm() {
+	// return this.form;
+	// }
 
 	abstract protected ItemModel getNewItemModel();
 

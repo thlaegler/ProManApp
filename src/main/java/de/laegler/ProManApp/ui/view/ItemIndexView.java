@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 import com.vaadin.addon.touchkit.ui.NavigationButton;
 import com.vaadin.addon.touchkit.ui.VerticalComponentGroup;
+import com.vaadin.ui.CssLayout;
 
 import de.laegler.ProManApp.bean.ItemBean;
 import de.laegler.ProManApp.model.ItemModel;
@@ -38,11 +39,17 @@ public abstract class ItemIndexView extends ItemView {
 
 	@Override
 	protected void buildView() {
+		content.addComponent(getItemIndexForm());
+	}
+
+	protected CssLayout getItemIndexForm() {
+		CssLayout itemIndexForm = new CssLayout();
+
 		VerticalComponentGroup itemGroup = new VerticalComponentGroup();
 		itemGroup.setWidth("100%");
 		itemGroup.setMargin(true);
 
-		ArrayList<ItemBean> itemBeans = this.itemModel.getItemBeans();
+		ArrayList<ItemBean> itemBeans = this.getItemModel().getItemBeans();
 		for (ItemBean itemBean : itemBeans) {
 			NavigationButton itemDetailNavButton = new ItemDetailNavButton();
 
@@ -55,8 +62,8 @@ public abstract class ItemIndexView extends ItemView {
 
 			itemGroup.addComponent(itemDetailNavButton);
 		}
-		this.form.addComponent(itemGroup);
-		content.addComponent(this.getForm());
+		itemIndexForm.addComponent(itemGroup);
+		return itemIndexForm;
 	}
 
 	@Override
