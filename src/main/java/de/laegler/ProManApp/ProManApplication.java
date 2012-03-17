@@ -43,9 +43,9 @@ public class ProManApplication extends TouchKitApplication implements
 	@Override
 	public void onRequestStart(HttpServletRequest request,
 			HttpServletResponse response) {
-		System.out.println("[Start of request");
-		System.out.println(" Query string: " + request.getQueryString());
-		System.out.println(" Path: " + request.getPathInfo());
+		// System.out.println("[Start of request");
+		// System.out.println(" Query string: " + request.getQueryString());
+		// System.out.println(" Path: " + request.getPathInfo());
 
 		getSession().setHttpResponse(response);
 		getSession().setHttpRequest(request);
@@ -55,7 +55,7 @@ public class ProManApplication extends TouchKitApplication implements
 	@Override
 	public void onRequestEnd(HttpServletRequest request,
 			HttpServletResponse response) {
-		System.out.println(" End of request]");
+		// System.out.println(" End of request]");
 		super.onRequestEnd(request, response);
 	}
 

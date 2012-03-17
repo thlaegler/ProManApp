@@ -159,7 +159,7 @@ public abstract class ItemModel extends AbstractProManModel implements
 				+ this.getItemTable() + " sub "
 				+ "WHERE super.itemId = sub.itemId;";
 
-		System.out.println(sql);
+		// System.out.println(sql);
 
 		ArrayList<ItemBean> itemBeans = new ArrayList<ItemBean>();
 
