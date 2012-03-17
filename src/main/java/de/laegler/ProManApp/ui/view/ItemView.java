@@ -41,7 +41,7 @@ public abstract class ItemView extends AbstractProManView implements
 		this.itemModel = aItemModel;
 
 		this.buildView();
-
+		setContent(this.content);
 		// this.form = new CssLayout();
 		// this.form.setWidth("100%");
 	}

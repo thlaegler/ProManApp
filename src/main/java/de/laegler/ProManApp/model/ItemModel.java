@@ -33,6 +33,7 @@ public abstract class ItemModel extends AbstractProManModel implements
 	protected final String itemTable;
 
 	public ItemModel() {
+		super();
 		this.itemBean = getNewItemBean();
 		this.itemTable = getItemTable();
 	}

@@ -51,10 +51,10 @@ public abstract class ItemDetailView extends ItemView {
 		itemGroup.setWidth("100%");
 		itemGroup.setMargin(true);
 
-		Field eMailField = new TextField("Name");
-		eMailField.setValue(((PersonBean) this.getItemModel().getItemBean())
+		Field nameField = new TextField("Name");
+		nameField.setValue(((PersonBean) this.getItemModel().getItemBean())
 				.getName());
-		itemGroup.addComponent(eMailField);
+		itemGroup.addComponent(nameField);
 
 		itemDetailForm.addComponent(itemGroup);
 
