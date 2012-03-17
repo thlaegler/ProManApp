@@ -1,9 +1,9 @@
 /**
+ * 
  * (c) Copyright 2012 Laegler IT Solutions Germany GbR
  *
  * Project: ProMan 0.1
  *
- * This File <code>UserModel.java</code> was generated from UML-Model with StarUML 11.03.2012 by Thomas Laegler <thomas.laegler@googlemail.com>
  */
 
 package de.laegler.ProManApp.model;
@@ -17,34 +17,22 @@ import de.laegler.ProManApp.bean.ItemBean;
 import de.laegler.ProManApp.bean.PersonBean;
 
 /**
- * ...
+ * PersonModel
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public class PersonModel extends ItemModel {
 
-	/**
-	 * 
-	 */
 	public PersonModel() {
 		super();
 	}
 
-	/**
-	 * 
-	 * @param aItemBean
-	 */
 	public PersonModel(ItemBean aItemBean) {
 		super(aItemBean);
 	}
 
-	/**
-	 * 
-	 * @param aEMail
-	 * @return
-	 */
 	public ItemBean getItemByEMail(String aEMail) {
 		return null;
 	}
@@ -79,4 +67,5 @@ public class PersonModel extends ItemModel {
 	public List<ItemBean> getItemsByRelation(Object aRelation) {
 		return null;
 	}
+
 }

@@ -1,9 +1,9 @@
 /**
+ * 
  * (c) Copyright 2012 Laegler IT Solutions Germany GbR
  *
  * Project: ProMan 0.1
  *
- * This File <code>MainTabBarView.java</code> was generated from UML-Model with StarUML 11.03.2012 by Thomas Laegler <thomas.laegler@googlemail.com>
  */
 
 package de.laegler.ProManApp.ui.tab;
@@ -14,12 +14,12 @@ import com.vaadin.ui.TabSheet.Tab;
 import de.laegler.ProManApp.application.AbstractProManTabBarView;
 
 /**
- * ...
+ * MainTabBarView
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public class MainTabBarView extends AbstractProManTabBarView {
 
 	private static final long serialVersionUID = -2837609214168222721L;

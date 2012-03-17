@@ -1,9 +1,9 @@
 /**
+ * 
  * (c) Copyright 2012 Laegler IT Solutions Germany GbR
  *
  * Project: ProMan 0.1
  *
- * This File <code>ProManApplication.java</code> was generated from UML-Model with StarUML 11.03.2012 by Thomas Laegler <thomas.laegler@googlemail.com>
  */
 
 package de.laegler.ProManApp;
@@ -19,12 +19,12 @@ import de.laegler.ProManApp.application.Session;
 import de.laegler.ProManApp.ui.tab.MainTabBarView;
 
 /**
- * ...
+ * ProManApplication
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public class ProManApplication extends TouchKitApplication implements
 		HttpServletRequestListener {
 
@@ -101,17 +101,11 @@ public class ProManApplication extends TouchKitApplication implements
 		new ProManApplication().init();
 	}
 
-	/**
-	 * @return the mainWindow
-	 */
 	@Override
 	public TouchKitWindow getMainWindow() {
 		return mainWindow;
 	}
 
-	/**
-	 * @return the sessionModel
-	 */
 	public Session getSession() {
 		if (this.session == null) {
 			this.session = new Session();
@@ -119,13 +113,11 @@ public class ProManApplication extends TouchKitApplication implements
 		return this.session;
 	}
 
-	/**
-	 * @return the mainTabsheet
-	 */
 	public MainTabBarView getMainTabBarView() {
 		if (this.mainTabBarView == null) {
 			this.mainTabBarView = new MainTabBarView();
 		}
 		return this.mainTabBarView;
 	}
+
 }

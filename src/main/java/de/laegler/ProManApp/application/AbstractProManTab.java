@@ -1,9 +1,9 @@
 /**
+ * 
  * (c) Copyright 2012 Laegler IT Solutions Germany GbR
  *
  * Project: ProMan 0.1
  *
- * This File <code>PerspectiveView.java</code> was generated from UML-Model with StarUML 11.03.2012 by Thomas Laegler <thomas.laegler@googlemail.com>
  */
 
 package de.laegler.ProManApp.application;
@@ -13,12 +13,12 @@ import com.vaadin.addon.touchkit.ui.NavigationManager;
 import de.laegler.ProManApp.ui.view.AbstractProManView;
 
 /**
- * ...
+ * AbstractProManTab
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 abstract public class AbstractProManTab extends NavigationManager {
 
 	private static final long serialVersionUID = 2152925511225741804L;
@@ -38,4 +38,5 @@ abstract public class AbstractProManTab extends NavigationManager {
 	public void navigateToRoot() {
 		navigateTo(this.rootView);
 	}
+
 }

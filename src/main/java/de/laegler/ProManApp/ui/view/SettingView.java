@@ -8,14 +8,13 @@
 
 package de.laegler.ProManApp.ui.view;
 
-
 /**
- * ...
+ * SettingView
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public class SettingView extends AbstractProManView {
 
 	private static final long serialVersionUID = 1375437931477951139L;
@@ -26,7 +25,6 @@ public class SettingView extends AbstractProManView {
 
 	@Override
 	protected void buildView() {
-		// TODO Auto-generated method stub
 
 	}
 

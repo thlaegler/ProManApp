@@ -1,3 +1,11 @@
+/**
+ * 
+ * (c) Copyright 2012 Laegler IT Solutions Germany GbR
+ *
+ * Project: ProMan 0.1
+ *
+ */
+
 package de.laegler.ProManApp.ui.view;
 
 import com.vaadin.addon.touchkit.ui.NavigationButton;
@@ -6,6 +14,13 @@ import com.vaadin.addon.touchkit.ui.VerticalComponentGroup;
 import de.laegler.ProManApp.bean.ItemBean;
 import de.laegler.ProManApp.model.ItemModel;
 
+/**
+ * SoftwareIndexView
+ * 
+ * @author Thomas Laegler <thomas.laegler@googlemail.com>
+ * @version 0.1
+ * @since 0.1
+ */
 public class SoftwareIndexView extends ItemIndexView {
 
 	private static final long serialVersionUID = 9071409083205123403L;
@@ -47,13 +62,11 @@ public class SoftwareIndexView extends ItemIndexView {
 
 	@Override
 	protected ItemDetailView getNewItemDetailView(ItemModel aItemModel) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	protected ItemDetailView getNewItemDetailView(ItemBean aItemBean) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

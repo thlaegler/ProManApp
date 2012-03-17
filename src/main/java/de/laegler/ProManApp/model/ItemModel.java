@@ -1,9 +1,9 @@
 /**
+ * 
  * (c) Copyright 2012 Laegler IT Solutions Germany GbR
  *
  * Project: ProMan 0.1
  *
- * This File <code>ItemModel.java</code> was generated from UML-Model with StarUML 11.03.2012 by Thomas Laegler <thomas.laegler@googlemail.com>
  */
 
 package de.laegler.ProManApp.model;
@@ -19,12 +19,12 @@ import de.laegler.ProManApp.application.Relationship;
 import de.laegler.ProManApp.bean.ItemBean;
 
 /**
- * ...
+ * ItemModel
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public abstract class ItemModel extends AbstractProManModel implements
 		ItemModelInterface {
 
@@ -112,33 +112,24 @@ public abstract class ItemModel extends AbstractProManModel implements
 		return resultSet;
 	}
 
-	/** */
 	public boolean persist() {
 		return false;
-
 	}
 
-	/** */
 	public boolean remove() {
 		return false;
-
 	}
 
-	/** */
 	public boolean restore() {
 		return false;
 
 	}
 
-	/** */
 	@Override
 	public ItemBean getBeanByItemId(int aItemId) {
 		return itemBean;
-
 	}
 
-	/**
-	 */
 	@Override
 	public ItemBean getBeanByDomainId(int aDomainId) {
 		// String query = "SELECT * FROM gagaga";
@@ -163,10 +154,6 @@ public abstract class ItemModel extends AbstractProManModel implements
 		return null;
 	}
 
-	/**
-	 * 
-	 * @return
-	 */
 	public ArrayList<ItemBean> getItemBeans() {
 		String sql = "SELECT super.*, sub.* " + "FROM item super, "
 				+ this.getItemTable() + " sub "
@@ -190,12 +177,6 @@ public abstract class ItemModel extends AbstractProManModel implements
 		return itemBeans;
 	}
 
-	/**
-	 * 
-	 * @param aResultSet
-	 * @param aItem
-	 * @return
-	 */
 	protected ItemBean buildItemBean(ResultSet aResultSet, ItemBean aItemBean) {
 		try {
 			aItemBean.setItemId(aResultSet.getInt("itemId"));
@@ -208,15 +189,10 @@ public abstract class ItemModel extends AbstractProManModel implements
 		return aItemBean;
 	}
 
-	/**
-	 * 
-	 * @return
-	 */
 	abstract protected ItemBean getNewItemBean();
 
-	//
 	abstract protected String getItemTable();
-	//
+
 	// abstract public ItemBean getBeanByItemId(int aItemId);
 	//
 	// abstract public ItemBean getBeanByDomainId(int aDomainId);

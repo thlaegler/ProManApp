@@ -16,7 +16,7 @@ import org.junit.Test;
 import de.laegler.ProManApp.bean.PersonBean;
 
 /**
- * ...
+ * PersonBeanTest
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1

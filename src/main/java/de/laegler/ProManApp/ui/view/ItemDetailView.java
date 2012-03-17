@@ -17,12 +17,12 @@ import de.laegler.ProManApp.bean.PersonBean;
 import de.laegler.ProManApp.model.ItemModel;
 
 /**
- * ...
+ * ItemDetailView
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public abstract class ItemDetailView extends ItemView {
 
 	private static final long serialVersionUID = -2536820335032612663L;
@@ -86,4 +86,5 @@ public abstract class ItemDetailView extends ItemView {
 	//
 	// setContent(content);
 	// }
+
 }

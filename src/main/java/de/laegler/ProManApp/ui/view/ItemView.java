@@ -11,12 +11,12 @@ package de.laegler.ProManApp.ui.view;
 import de.laegler.ProManApp.model.ItemModel;
 
 /**
- * ...
+ * ItemView
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public abstract class ItemView extends AbstractProManView implements
 		ItemViewInterface {
 

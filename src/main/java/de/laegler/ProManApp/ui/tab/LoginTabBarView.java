@@ -14,12 +14,12 @@ import com.vaadin.ui.TabSheet.Tab;
 import de.laegler.ProManApp.application.AbstractProManTabBarView;
 
 /**
- * ...
+ * LoginTabBarView
  * 
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public class LoginTabBarView extends AbstractProManTabBarView {
 
 	private static final long serialVersionUID = 4382982484625915790L;

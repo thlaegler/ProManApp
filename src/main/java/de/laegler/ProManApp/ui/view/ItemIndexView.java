@@ -24,7 +24,7 @@ import de.laegler.ProManApp.ui.button.ItemDetailNavButton;
  * @author Thomas Laegler <thomas.laegler@googlemail.com>
  * @version 0.1
  * @since 0.1
- **/
+ */
 public abstract class ItemIndexView extends ItemView {
 
 	private static final long serialVersionUID = -8683045446995327006L;
@@ -72,4 +72,5 @@ public abstract class ItemIndexView extends ItemView {
 	abstract protected ItemDetailView getNewItemDetailView(ItemModel aItemModel);
 
 	abstract protected ItemDetailView getNewItemDetailView(ItemBean aItemBean);
+
 }
