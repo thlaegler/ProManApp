@@ -26,21 +26,26 @@ abstract public class AbstractProManView extends NavigationView {
 
 	public AbstractProManView(String aCaption) {
 		super(aCaption);
-	}
-
-	@Override
-	public void attach() {
-		super.attach();
 
 		this.content = new CssLayout();
 		this.content.setWidth("100%");
-
 		this.setWidth("100%");
-
-		this.buildView();
-
-		setContent(this.content);
 	}
+
+	// @Override
+	// public void attach() {
+	// super.attach();
+	//
+	// this.removeAllComponents()
+	// this.content = new CssLayout();
+	// this.content.setWidth("100%");
+	//
+	// this.setWidth("100%");
+	//
+	// this.buildView();
+	//
+	// setContent(this.content);
+	// }
 
 	abstract protected void buildView();
 

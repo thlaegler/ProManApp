@@ -27,6 +27,7 @@ public class PerspectiveView extends AbstractProManView {
 
 	public PerspectiveView() {
 		super("Perspectives");
+		this.buildView();
 	}
 
 	@Override
