@@ -32,6 +32,7 @@ public class PerspectiveView extends AbstractProManView {
 
 	@Override
 	protected void buildView() {
+
 		form = new CssLayout();
 
 		VerticalComponentGroup layout = new VerticalComponentGroup();
