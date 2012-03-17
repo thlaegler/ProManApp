@@ -55,10 +55,9 @@ public abstract class ItemIndexView extends ItemView {
 
 			itemDetailNavButton.setCaption("" + itemBean.getItemId());
 			itemDetailNavButton.setDescription(itemBean.getName());
+			itemDetailNavButton.setTargetView(getNewItemDetailView(itemBean));
 			// TODO: Icons
 			// itemDetailNavButton.setIcon();
-
-			itemDetailNavButton.setTargetView(getNewItemDetailView(itemBean));
 
 			itemGroup.addComponent(itemDetailNavButton);
 		}
