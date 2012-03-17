@@ -58,7 +58,8 @@ public abstract class ItemModel extends AbstractProManModel implements
 		if (this.connection == null) {
 			try {
 				this.connection = DriverManager.getConnection(
-						"jdbc:mysql://localhost:3306/proman", "root", "");
+						"jdbc:mysql://localhost:3306/proman", "proman",
+						"proman");
 			} catch (SQLException e) {
 				e.printStackTrace();
 				return null;
