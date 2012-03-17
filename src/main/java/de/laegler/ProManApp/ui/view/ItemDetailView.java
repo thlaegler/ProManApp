@@ -57,8 +57,6 @@ public abstract class ItemDetailView extends ItemView {
 		itemGroup.addComponent(nameField);
 
 		itemDetailForm.addComponent(itemGroup);
-
-		// VerticalComponentGroup itemDetailGroup = getItemDetailGroup();
 		itemDetailForm.addComponent(getItemDetailGroup());
 
 		// TODO: Relationen iterieren.
