@@ -20,7 +20,7 @@ public class PersonBean extends ItemBean {
 	protected String eMail;
 
 	public void setEMail(String aEMail) {
-
+		this.eMail = aEMail;
 	}
 
 	public String getEMail() {

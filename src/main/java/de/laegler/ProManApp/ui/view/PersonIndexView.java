@@ -9,7 +9,7 @@ public class PersonIndexView extends ItemIndexView {
 	private static final long serialVersionUID = 9071409083205123403L;
 
 	public PersonIndexView() {
-		super("User Index");
+		super("Person Index");
 	}
 
 	@Override
