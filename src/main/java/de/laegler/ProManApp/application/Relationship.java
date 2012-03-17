@@ -59,7 +59,9 @@ public class Relationship extends AbstractProManModel {
 
 	/** */
 	public void setRelationType(Relationshiptype aRelationtype) {
+
 		this.relationtype = aRelationtype;
+
 	}
 
 	public ArrayList<Relationship> getRelationshipsByItemBean(ItemBean aItemBean) {
