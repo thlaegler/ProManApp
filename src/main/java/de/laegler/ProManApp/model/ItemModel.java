@@ -15,6 +15,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import com.mysql.jdbc.CommunicationsException;
+
 import de.laegler.ProManApp.application.Relationship;
 import de.laegler.ProManApp.bean.ItemBean;
 
@@ -30,7 +32,7 @@ public abstract class ItemModel extends AbstractProManModel implements
 
 	protected final ItemBean itemBean;
 
-	protected final String itemTable;
+	protected String itemTable;
 
 	public ItemModel() {
 		super();
@@ -61,9 +63,10 @@ public abstract class ItemModel extends AbstractProManModel implements
 				this.connection = DriverManager.getConnection(
 						"jdbc:mysql://localhost:3306/proman", "proman",
 						"proman");
+			} catch (CommunicationsException e) {
+				e.printStackTrace();
 			} catch (SQLException e) {
 				e.printStackTrace();
-				return null;
 			}
 		}
 		return this.connection;
@@ -140,6 +143,10 @@ public abstract class ItemModel extends AbstractProManModel implements
 	}
 
 	public ArrayList<Relationship> getRelationships() {
+		return this.getRelationshipsByItemBean(this.getItemBean());
+	}
+
+	public ArrayList<Relationship> getRelationshipsByItemId(int aItemId) {
 		return this.getRelationshipsByItemBean(this.getItemBean());
 	}
 

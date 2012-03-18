@@ -9,9 +9,7 @@
 package de.laegler.ProManApp.model;
 
 import java.sql.SQLException;
-import java.util.List;
 
-import de.laegler.ProManApp.application.Relationship;
 import de.laegler.ProManApp.bean.ItemBean;
 
 /**
@@ -27,10 +25,10 @@ public interface ItemModelInterface {
 
 	public ItemBean getBeanByDomainId(int aDomainId) throws SQLException;
 
-	public List<Relationship> getRelationsByItemId(int aItemId)
-			throws SQLException;
-
-	public List<ItemBean> getItemsByRelation(Object aRelation)
-			throws SQLException;
+	// public List<Relationship> getRelationsByItemId(int aItemId)
+	// throws SQLException;
+	//
+	// public List<ItemBean> getItemsByRelation(Object aRelation)
+	// throws SQLException;
 
 }

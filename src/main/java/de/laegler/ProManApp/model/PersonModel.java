@@ -10,9 +10,7 @@ package de.laegler.ProManApp.model;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 
-import de.laegler.ProManApp.application.Relationship;
 import de.laegler.ProManApp.bean.ItemBean;
 import de.laegler.ProManApp.bean.PersonBean;
 
@@ -33,9 +31,9 @@ public class PersonModel extends ItemModel {
 		super(aItemBean);
 	}
 
-	public ItemBean getItemByEMail(String aEMail) {
-		return null;
-	}
+	// public ItemBean getItemByEMail(String aEMail) {
+	// return null;
+	// }
 
 	@Override
 	protected ItemBean getNewItemBean() {
@@ -55,17 +53,24 @@ public class PersonModel extends ItemModel {
 
 	@Override
 	protected String getItemTable() {
-		return "person";
+		if (this.itemTable == null) {
+			this.itemTable = "person";
+		}
+		return this.itemTable;
 	}
 
-	@Override
-	public List<Relationship> getRelationsByItemId(int aItemId) {
-		return null;
-	}
-
-	@Override
-	public List<ItemBean> getItemsByRelation(Object aRelation) {
-		return null;
-	}
+	// @Override
+	// public List<Relationship> getRelationsByItemId(int aItemId)
+	// throws SQLException {
+	// // TODO Auto-generated method stub
+	// return null;
+	// }
+	//
+	// @Override
+	// public List<ItemBean> getItemsByRelation(Object aRelation)
+	// throws SQLException {
+	// // TODO Auto-generated method stub
+	// return null;
+	// }
 
 }

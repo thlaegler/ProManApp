@@ -1,0 +1,74 @@
+[Box: ::de.laegler.ProManApp.ui.view - ::<<Unknown>>::NavigationView]
+X=616
+Y=40
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.model::ItemModel]
+X=743
+Y=454
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::AbstractProManView]
+X=622
+Y=121
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::ItemDetailView]
+X=261
+Y=454
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::ItemIndexView]
+X=20
+Y=454
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::ItemSearchView]
+X=502
+Y=454
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::ItemView]
+X=502
+Y=268
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::ItemViewInterface]
+X=1046
+Y=454
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::LoginView]
+X=261
+Y=268
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::ModelView]
+X=20
+Y=268
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::PasswordView]
+X=1225
+Y=268
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::PersonDetailView]
+X=502
+Y=796
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::PersonIndexView]
+X=20
+Y=796
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::PerspectiveView]
+X=984
+Y=268
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::SettingView]
+X=743
+Y=268
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::SoftwareDetailView]
+X=743
+Y=796
+
+[Box: ::de.laegler.ProManApp.ui.view - ::de.laegler.ProManApp.ui.view::SoftwareIndexView]
+X=261
+Y=796
+
+[Diagram: ::de.laegler.ProManApp.ui.view]
+OffsetX=175
+OffsetY=244
+Visibility=0
+ShowAssoc=1
+
