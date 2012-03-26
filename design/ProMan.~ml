@@ -1075,7 +1075,7 @@
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="jLTzZIgnjUuTsG4pdO4YVgAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="+D2gOMp5JEun3ZZkyPuG0AAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">RelationType</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">RelationshipType</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="k42rZHeGSECPVEjUyJucjgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1100,13 +1100,13 @@
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">390</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">910</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">243</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">262</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">160</XPD:ATTR>
 <XPD:REF name="Model">pHS7k3q3xUaAtvEbCcC2cAAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="81FcdF5IFE+MpjA0X2eOBwAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="6Pg/IW+NPUa03uX0d7mphwAA">
 <XPD:ATTR name="FontStyle" type="integer">1</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Relation</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Relationship</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="6wUqs2uqy0KY7Yfdi/ESEAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -1215,7 +1215,7 @@
 <XPD:ATTR name="LineColor" type="string">clMaroon</XPD:ATTR>
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">710,934;632,934</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">710,934;651,934</XPD:ATTR>
 <XPD:REF name="Model">pjbVvZhmU0qQkB4yYB3rhwAA</XPD:REF>
 <XPD:REF name="Head">oLoCq792bUmTVCSMg0+FqQAA</XPD:REF>
 <XPD:REF name="Tail">rxK4lREawkW2mwWyAhI7igAA</XPD:REF>
@@ -4911,7 +4911,7 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[1]" type="UMLClass" guid="pHS7k3q3xUaAtvEbCcC2cAAA">
-<XPD:ATTR name="Name" type="string">Relation</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">Relationship</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">...
 
 @author Thomas Laegler &lt;thomas.laegler@googlemail.com&gt;
@@ -5076,7 +5076,7 @@
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[3]" type="UMLClass" guid="ofthuvqA+UmTzQuGauivCAAA">
-<XPD:ATTR name="Name" type="string">RelationType</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">RelationshipType</XPD:ATTR>
 <XPD:ATTR name="Documentation" type="string">...
 
 @author Thomas Laegler &lt;thomas.laegler@googlemail.com&gt;
